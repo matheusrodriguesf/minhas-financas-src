@@ -1,0 +1,30 @@
+version: '3'
+services:
+  financa-db:
+    image: postgres
+    container_name: financa-db
+    environment:
+      - POSTGRES_PASSWORD=financa123
+      - POSTGRES_USER=financa
+      - POSTGRES_DB=financa
+    ports:
+      - 5432:5432
+    networks:
+      - postgres-network
+  
+  financa-pgadmin:
+    image: dpage/pgadmin4
+    container_name: financa-pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=matheusarcelino@emailteste.com
+      - PGADMIN_DEFAULT_PASSWORD=Pgadmin123
+    ports:
+      - 16543:80
+    depends_on:
+      - financa-db
+    networks:
+      - postgres-network            
+
+networks:
+  postgres-network:
+    driver: bridge
