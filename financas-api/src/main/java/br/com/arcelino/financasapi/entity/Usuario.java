@@ -35,7 +35,7 @@ public class Usuario {
     @Column(name = "senha_usuario", nullable = false, length = 150)
     private String senha;
 
-    @Column(name = "ativo_usuario", nullable = false)
+    @Column(name = "st_usuario", nullable = false)
     private Boolean ativo;
 
     @Column(name = "data_cadastro_usuario", insertable = false, updatable = false)
