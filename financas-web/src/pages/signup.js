@@ -6,8 +6,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import InputTextField from '../../components/input-text-field';
-import ButtonCustom from '../../components/button';
+import InputTextField from '../components/input-text-field';
+import ButtonCustom from '../components/button';
 
 const defaultTheme = createTheme();
 
